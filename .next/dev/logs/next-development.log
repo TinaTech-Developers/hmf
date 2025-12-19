@@ -1,0 +1,19 @@
+[00:00:00.760] Server  LOG      ✓ Ready in 506ms
+[00:00:05.803] Server  LOG      ○ Compiling / ...
+[00:00:08.477] Server  WARN    Image with src "/hiraya_logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:00:08.683] Server  WARN     ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.
+[00:00:08.879] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:09.378] Browser WARN    Image with src "/hiraya_logo.png" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:00:09.378] Browser WARN    Image with src "/hiraya_logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:09.379] Browser WARN    Image with src "https://dch.org.za/wp-content/uploads/2019/05/Untitled-20-2.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:09.379] Browser WARN    Image with src "/lifestyle-scene-from-community-showing-care-support-from-people.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:09.379] Browser WARN    Image with src "/group-happy-african-volunteers-planting-tree-park-africa-volunteering-charity-people-ecology-concept.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:50.345] Browser WARN    Image with src "https://static.vecteezy.com/system/resources/thumbnails/030/536/174/small/entrepreneur-asian-businessman-and-businesswoman-discussing-new-business-project-in-tablet-in-modern-meeting-in-modern-office-asian-business-casual-concept-photo.jpg" is using quality "100" which is not configured in images.qualities [75]. Please update your config to [100, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+[00:00:52.638] Server  LOG     ✅ MongoDB Connected
+[00:00:53.035] Server  LOG     ⚠️ MongoDB already connected
+[00:00:53.221] Browser WARN    Image with src "https://xiin9ga1zk.ufs.sh/f/jY8p81n3hNu6YVbVRDx8TW2l1PnAdfgxG6LsCrK0tZQzMDFb" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:53.221] Browser WARN    Image with src "https://static.vecteezy.com/system/resources/previews/029/495/622/non_2x/silhouette-of-a-man-in-a-wheelchair-on-the-beach-at-sunset-disabled-handicapped-man-has-a-hope-he-is-sitting-on-wheelchair-and-stretching-hands-at-sunset-ai-generated-free-photo.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:53.221] Browser WARN    Image with src "https://xiin9ga1zk.ufs.sh/f/jY8p81n3hNu686eXYU0GERzexLYm6Vk9KIv3sXnt4aZThA7i" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
