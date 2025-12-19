@@ -1,0 +1,98 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import React from "react";
+import FloatingNavbar from "./navbar";
+import ProfessionalFooter from "./footer";
+
+export default function PageLayout({
+  title,
+  description,
+  image,
+  ctaPrimary,
+  ctaSecondary,
+  children,
+}) {
+  return (
+    <main className="w-full bg-white">
+      <FloatingNavbar />
+      {/* Hero Section */}
+      <section className="relative h-[60vh] sm:h-[80vh] flex items-center justify-center overflow-hidden">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          quality={100} // 🔹 Makes image HD — no compression
+          sizes="100vw" // 🔹 Ensures full-screen image loads highest resolution
+          className="object-cover object-center"
+          unoptimized={true} // (Optional) Disables Next.js compression completely
+        />
+
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          className="relative z-10 max-w-3xl mx-auto text-center px-4 md:mt-16 sm:px-6 lg:px-8 text-white"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.15 }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight"
+          >
+            {title}
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.3 }}
+            className="text-base sm:text-lg md:text-xl mb-6 text-gray-100 max-w-2xl mx-auto leading-relaxed"
+          >
+            {description}
+          </motion.p>
+
+          {/* CTA Buttons (optional) */}
+          {(ctaPrimary || ctaSecondary) && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.45 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-2"
+            >
+              {ctaPrimary && (
+                <a
+                  href={ctaPrimary.href}
+                  aria-label={ctaPrimary.ariaLabel ?? ctaPrimary.label}
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold shadow-lg transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#A7CE44]-500
+                    bg-[#A7CE44] hover:bg--[#a2cc39] text-white text-sm sm:text-base"
+                >
+                  {ctaPrimary.label}
+                </a>
+              )}
+
+              {ctaSecondary && (
+                <a
+                  href={ctaSecondary.href}
+                  aria-label={ctaSecondary.ariaLabel ?? ctaSecondary.label}
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition ring-1 ring-white/20 text-white text-sm sm:text-base
+                    bg-white/10 hover:bg-white/20"
+                >
+                  {ctaSecondary.label}
+                </a>
+              )}
+            </motion.div>
+          )}
+        </motion.div>
+      </section>
+
+      {children && <div className="relative z-10">{children}</div>}
+      <ProfessionalFooter />
+    </main>
+  );
+}
